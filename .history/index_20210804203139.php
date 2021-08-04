@@ -49,27 +49,15 @@ if(isset($_GET["trinti"])) {
     //patikrinti ar musu informacinis cookie egzistuoja
     //is to cookies pasiimti masyva
     //tikrinti ar musu t_id sutampa su kuriuo nors klientu
-    
-    //klientai[0]
-    //klientai[1]
-    //..
-    //klientai[9]
-    //t_id = 10
-    //$klientai[10] - kad tai neegzistuoja
 
-    if(isset($_COOKIE["klientai"])) {
+    if(!isset($_COOKIE["klientai"])) {
         $klientai = $_COOKIE["klientai"]; //teksta
         $klientai = explode("|", $klientai);//masyva
 
-        if(isset($klientai[$t_id])) {
-            unset($klientai[$t_id]);
+        if() {
+            unset($);
         }
 
-        //implode, del to mes turim atnaujinti ir pati sausainiuka
-        $klientai_tekstas = implode("|", $klientai);
-        setcookie("klientai", $klientai_tekstas, time() + 3600, "/");
-
-        header("Location: index.php");
     }
     
     echo "Trinamo elemento id: ". $t_id;
@@ -134,14 +122,10 @@ echo "<table>";
 //$klientai - dvimatis masyvas
 //$eilute - vienmatis asociatyvus masyvas
 //$stulpelis - masyvo elementas/arba kazkoks kintamasis
-$indeksas = 0;
 foreach ($klientai as $eilute) {
 //Isvedineja lentyneles - eilute 200 eiluciu
     echo "<tr>";
     //isvesti stulpelius?
-        echo "<td>";
-            echo $indeksas;
-        echo "</td>";
     foreach($eilute as $stulpelis) { // 7 stulpeliai
         echo "<td>";
         echo $stulpelis;
@@ -149,7 +133,6 @@ foreach ($klientai as $eilute) {
     }
 
     echo "</tr>";
-    $indeksas++;
 }
 
 echo "</table>";

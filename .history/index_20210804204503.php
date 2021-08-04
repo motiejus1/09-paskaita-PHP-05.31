@@ -134,14 +134,11 @@ echo "<table>";
 //$klientai - dvimatis masyvas
 //$eilute - vienmatis asociatyvus masyvas
 //$stulpelis - masyvo elementas/arba kazkoks kintamasis
-$indeksas = 0;
 foreach ($klientai as $eilute) {
 //Isvedineja lentyneles - eilute 200 eiluciu
     echo "<tr>";
     //isvesti stulpelius?
-        echo "<td>";
-            echo $indeksas;
-        echo "</td>";
+    "<td>"
     foreach($eilute as $stulpelis) { // 7 stulpeliai
         echo "<td>";
         echo $stulpelis;
@@ -149,7 +146,6 @@ foreach ($klientai as $eilute) {
     }
 
     echo "</tr>";
-    $indeksas++;
 }
 
 echo "</table>";

@@ -149,7 +149,7 @@ foreach ($klientai as $eilute) {
     }
 
     echo "</tr>";
-    $indeksas++;
+    $indeksas
 }
 
 echo "</table>";

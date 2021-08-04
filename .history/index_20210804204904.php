@@ -140,7 +140,7 @@ foreach ($klientai as $eilute) {
     echo "<tr>";
     //isvesti stulpelius?
         echo "<td>";
-            echo $indeksas;
+
         echo "</td>";
     foreach($eilute as $stulpelis) { // 7 stulpeliai
         echo "<td>";
@@ -149,7 +149,6 @@ foreach ($klientai as $eilute) {
     }
 
     echo "</tr>";
-    $indeksas++;
 }
 
 echo "</table>";
