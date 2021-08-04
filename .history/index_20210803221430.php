@@ -37,7 +37,7 @@
 // Papildomai: Sukurti galimybę pridėti klientą į masyvą bei ištrinti.
 
 
-if (isset($_GET["patvirtinti"])) {
+if(isset($_GET["patvirtinti"])) {
     $id = $_GET["id"];
     $vardas = $_GET["vardas"];
     $pavarde = $_GET["pavarde"];
@@ -52,8 +52,7 @@ if (isset($_GET["patvirtinti"])) {
     $klientai_tekstas = $_COOKIE["klientai"] . "|$id,$vardas,$pavarde,$asmens_kodas,$prisijungimo_data,$adresas,$elpastas";
     // echo $klientai_tekstas;
     setcookie("klientai", $klientai_tekstas, time() + 3600, "/");
-    //imituoti persikrovima
-    header("Location: index.php");
+    header()
 }
 
 if(!isset($_COOKIE["klientai"])) {
@@ -147,10 +146,8 @@ for($i = 0; $i < count($klientai) ; $i++) {
 $klientai_tekstas = implode("|",$klientai);
 
 // echo $klientai_tekstas;
-//Reikalingas tik tam kad nustatytu musu pradines sugeneruotas reiksmes
-//Sits sausainiukas turi buti paleidziamas tik viena vieninteli karta
 if(!isset($_COOKIE["klientai"])) {
-    setcookie("klientai", $klientai_tekstas, time() + 3600, "/");
+ setcookie("klientai", $klientai_tekstas, time() + 3600, "/");
 }
 ?>
 

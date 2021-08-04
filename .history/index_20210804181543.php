@@ -52,8 +52,6 @@ if (isset($_GET["patvirtinti"])) {
     $klientai_tekstas = $_COOKIE["klientai"] . "|$id,$vardas,$pavarde,$asmens_kodas,$prisijungimo_data,$adresas,$elpastas";
     // echo $klientai_tekstas;
     setcookie("klientai", $klientai_tekstas, time() + 3600, "/");
-    //imituoti persikrovima
-    header("Location: index.php");
 }
 
 if(!isset($_COOKIE["klientai"])) {
@@ -149,7 +147,7 @@ $klientai_tekstas = implode("|",$klientai);
 // echo $klientai_tekstas;
 //Reikalingas tik tam kad nustatytu musu pradines sugeneruotas reiksmes
 //Sits sausainiukas turi buti paleidziamas tik viena vieninteli karta
-if(!isset($_COOKIE["klientai"])) {
+if(isset()) {
     setcookie("klientai", $klientai_tekstas, time() + 3600, "/");
 }
 ?>

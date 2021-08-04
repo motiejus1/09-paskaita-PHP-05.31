@@ -52,8 +52,7 @@ if (isset($_GET["patvirtinti"])) {
     $klientai_tekstas = $_COOKIE["klientai"] . "|$id,$vardas,$pavarde,$asmens_kodas,$prisijungimo_data,$adresas,$elpastas";
     // echo $klientai_tekstas;
     setcookie("klientai", $klientai_tekstas, time() + 3600, "/");
-    //imituoti persikrovima
-    header("Location: index.php");
+    header("Location: index")
 }
 
 if(!isset($_COOKIE["klientai"])) {
