@@ -259,11 +259,7 @@ var_dump($klientai);
 
 
 $trimatis = array(
-    array(
-        array(),
-        array(),
-        array(),
-    ),
+    array(),
     array(),
     array(),
     array(),

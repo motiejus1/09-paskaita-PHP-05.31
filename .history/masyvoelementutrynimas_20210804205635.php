@@ -258,16 +258,6 @@ for ($i=0; $i<count($klientai); $i++) {
 var_dump($klientai);
 
 
-$trimatis = array(
-    array(
-        array(),
-        array(),
-        array(),
-    ),
-    array(),
-    array(),
-    array(),
-
-);
+$trimatis = array()
 
 ?>
